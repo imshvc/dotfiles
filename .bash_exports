@@ -1,0 +1,36 @@
+# authors:
+#   Nurudin Imsirovic <imshvc>
+#
+# file:
+#   .bash_exports
+#
+# created:
+#   2025-01-19 02:01 AM
+#
+# updated:
+#   2025-01-19 02:13 AM
+#
+# repository:
+#   https://github.com/imshvc/dotfiles
+
+# disclaimer:
+#   I use these on Ubuntu Desktop 24.10 running GNOME 47.
+#   I cannot guarantee these will behave as intended on
+#   systems running different software.
+
+# begin: system specific variables
+#   todo: add platform specific variables.
+# end: system specific variables
+
+# begin: user specified variables
+
+# set: Web Browser
+export BROWSER=firefox
+
+# set: Terminal text editor
+export EDITOR=nano
+
+# set: GCC warning and error colors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# end: user specified variables

@@ -1,0 +1,38 @@
+[user]
+	name = Nurudin Imsirovic
+	author = imshvc
+	email = realnurudinimsirovic@gmail.com
+
+[core]
+	filemode = false
+	editor = nano
+	autocrlf = false
+	longpaths = true
+	# fix: for windows
+  # sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[status]
+	showuntrackedfiles=all
+
+[pull]
+	ff = only
+
+[push]
+	autoSetupRemote = true
+	default = simple
+
+# fix: Windows
+#[http]
+#  sslcainfo = C:\\Program Files\\Git\\usr\\ssl\\certs\\ca-bundle.crt
+
+[safe]
+	directory = *
+
+[advice]
+	addEmptyPathspec = false
