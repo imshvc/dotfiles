@@ -1,11 +1,16 @@
 # todo file: dotfiles
 
-TODO: (3)
-  [ ] functions: implement mcd() and mbox()
-  [ ] aliases: unix goodies (ls, ll, l, mkdir, ... etc)
-  [ ] third-party: implement ytmp3, ytmp4, etc...
+TODO: (4)
+  [ ] functions: implement mcd()
+  [ ] functions: implement mbox()
+  [ ] functions: implement cdseq()
+  [ ] functions: implement ytmp3(), ytmp4()
 
 WIP: (1)
   [*] script: one-liner to setup machine
 
-DONE: (0)
+DONE: (4)
+  [x] code: replace tabs with space (2-tabs)
+  [x] third-party: add nanorc
+  [x] third-party: add wgetrc
+  [x] aliases: unix goodies (ls, ll, mkdir, etc...)
