@@ -1,0 +1,11 @@
+# todo file: dotfiles
+
+TODO: (3)
+  [ ] functions: implement mcd() and mbox()
+  [ ] aliases: unix goodies (ls, ll, l, mkdir, ... etc)
+  [ ] third-party: implement ytmp3, ytmp4, etc...
+
+WIP: (1)
+  [*] script: one-liner to setup machine
+
+DONE: (0)
