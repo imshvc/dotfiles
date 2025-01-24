@@ -1,15 +1,18 @@
 # todo file: dotfiles
 
-TODO: (4)
-  [ ] functions: implement mcd()
-  [ ] functions: implement mbox()
-  [ ] functions: implement cdseq()
+TODO: (2)
+  [ ] functions: command substitution goodies for prompt
   [ ] functions: implement ytmp3(), ytmp4()
 
-WIP: (1)
-  [*] script: one-liner to setup machine
+WIP: (0)
 
-DONE: (4)
+DONE: (10)
+  [x] docs: explain present functions
+  [x] functions: implement cdseq()
+  [x] functions: implement mcd()
+  [x] script: one-liner to setup machine
+  [x] functions: implement log()
+  [x] code: rename bash function 'mbox' to 'log'
   [x] code: replace tabs with space (2-tabs)
   [x] third-party: add nanorc
   [x] third-party: add wgetrc
