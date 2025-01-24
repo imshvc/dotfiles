@@ -6,7 +6,7 @@ Straight-forward documentation for my dotfiles.
 
 # Functions
 
-Several functions live in [`.bash_functions`](../.bash_functions) file.
+Several functions live in [`.bash_functions`](./.bash_functions) file.
 
 ---
 
