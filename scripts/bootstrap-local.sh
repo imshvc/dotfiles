@@ -4,7 +4,7 @@
 # file:       bootstrap-local.sh
 # desc:       bootstrap my dotfiles locally
 # created:    2025-01-24 05:26 AM
-# updated:    2025-01-24 09:50 AM
+# updated:    2025-01-24 10:13 AM
 # repository: https://github.com/imshvc/dotfiles
 
 # one-liner: ./scripts/bootstrap-local.sh 2>/dev/null
@@ -73,6 +73,7 @@ cp ".gitconfig" "$HOME/.gitconfig" >&/dev/null
 cp ".nanorc" "$HOME/.nanorc" >&/dev/null
 cp ".profile" "$HOME/.profile" >&/dev/null
 cp ".wgetrc" "$HOME/.wgetrc" >&/dev/null
+cp ".pathlst" "$HOME/.pathlst" >&/dev/null
 
 source .bashrc
 

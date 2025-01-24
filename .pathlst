@@ -1,0 +1,18 @@
+# List of paths for the PATH variable.
+# Order takes precedence.
+#
+# Empty lines or lines starting with '#'
+# will be ignored.
+#
+# See ~/.bash_exports under set:
+#   PATH directories
+/usr/local/sbin
+/usr/local/bin
+/usr/sbin
+/usr/bin
+/sbin
+/bin
+~/.local/bin
+/usr/games
+/usr/local/games
+/snap/bin

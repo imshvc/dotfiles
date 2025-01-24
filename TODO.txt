@@ -15,7 +15,8 @@ WIP: (5)
   # PS1 can substitute commands, search: __git_ps1 as an example.
   [*] functions: command substitution goodies for prompt
 
-DONE: (11)
+DONE: (12)
+  [x] feature: .pathlst - list of paths for the PATH variable
   [x] cleanup: remove .dotfiles_bootstrapped and don't clear console
   [x] docs: explain present functions
   [x] functions: implement cdseq()
