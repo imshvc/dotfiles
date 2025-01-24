@@ -42,8 +42,7 @@ separately, see [Method 2 (bootstrap root user)](#method-2-bootstrap-root-user).
 **Run these commands as a regular user:**
 
 ```bash
-sudo cp /home/$USER/.bashrc /root/.bashrc
-sudo sed "s|\$HOME|/home/$USER|g" /root/.bashrc | sudo tee -a /root/.bashrc >&/dev/null
+sudo sed "s|\$HOME|/home/$USER|g" ~/.bashrc | sudo tee -a /root/.bashrc >&/dev/null
 ```
 
 ### Method 2 (bootstrap root user)

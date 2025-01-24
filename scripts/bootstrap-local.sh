@@ -4,16 +4,15 @@
 # file:       bootstrap-local.sh
 # desc:       bootstrap my dotfiles locally
 # created:    2025-01-24 05:26 AM
-# updated:    2025-01-24 05:40 AM
+# updated:    2025-01-24 05:58 AM
 # repository: https://github.com/imshvc/dotfiles
 
 # one-liner: ./scripts/bootstrap-local.sh 2>/dev/null
 
 # root user: 2 methods
 # -- method 1: source files from other user
-#      run these commands as a regular user:
-#        1. sudo cp /home/$USER/.bashrc /root/.bashrc
-#        2. sudo sed "s|\$HOME|/home/$USER|g" /root/.bashrc | sudo tee -a /root/.bashrc >&/dev/null
+#      run the command as a regular user:
+#        sudo sed "s|\$HOME|/home/$USER|g" ~/.bashrc | sudo tee -a /root/.bashrc >&/dev/null
 #
 #      sourcing files from other user's home folder is not recommended
 #      for security reasons, but I structured my files so that they play
