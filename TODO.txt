@@ -1,10 +1,19 @@
 # todo file: dotfiles
 
-TODO: (2)
-  [ ] functions: command substitution goodies for prompt
-  [ ] functions: implement ytmp3(), ytmp4()
+TODO: (0)
 
-WIP: (0)
+WIP: (5)
+  # yt-dlp aliases
+  [*] functions: implement ytmp3()
+  [*] functions: implement ytmp4()
+
+  # common directories and tasks
+  # 'q' = 'exit', 'desk' = '~ Desktop`, etc ...  
+  [*] aliases: common directories
+  [*] aliases: ports from windows
+
+  # PS1 can substitute commands, search: __git_ps1 as an example.
+  [*] functions: command substitution goodies for prompt
 
 DONE: (10)
   [x] docs: explain present functions
