@@ -1,6 +1,7 @@
 # todo file: dotfiles
 
-TODO: (0)
+TODO: (1)
+  [ ] readme: _roughly_ explain what each dotfile is
 
 WIP: (5)
   # yt-dlp aliases
