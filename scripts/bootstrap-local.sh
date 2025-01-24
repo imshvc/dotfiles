@@ -4,7 +4,7 @@
 # file:       bootstrap-local.sh
 # desc:       bootstrap my dotfiles locally
 # created:    2025-01-24 05:26 AM
-# updated:    2025-01-24 05:58 AM
+# updated:    2025-01-24 09:50 AM
 # repository: https://github.com/imshvc/dotfiles
 
 # one-liner: ./scripts/bootstrap-local.sh 2>/dev/null
@@ -30,9 +30,6 @@
 #      but this method is considered more secure as two
 #      configurations don't overlap.
 
-# clear console screen
-clear
-
 # make sure we're within git repo
 if [ ! -r "$PWD/scripts/" ]; then
   echo "fail:"
@@ -56,18 +53,8 @@ if [ "$ALLOW_ROOT" == "" ]; then
   fi
 fi
 
-# pushd "$HOME" >&/dev/null
-
-# fail: already bootstrapped
-# delete file to bootstrap again
-if [ -f "$HOME/.dotfiles_bootstrapped" ]; then
-  echo -e "fail:\n"
-  echo -e "  bootstrapped already.\n"
-  echo -e "  to bootstrap again run: rm -f $HOME/.dotfiles_bootstrapped\n"
-  echo -e "  then retry the bootstrap command."
-  # popd
-  exit 1
-fi
+# dotfiles repo directory
+pushd "$PWD" >&/dev/null
 
 echo "info: bootstrap in progress"
 
@@ -75,24 +62,22 @@ echo "info: bootstrap in progress"
 mkdir "$HOME/.local" >&/dev/null
 mkdir "$HOME/.local/bin" >&/dev/null
 
-cp "../.bash_aliases" "$HOME/.bash_aliases" >&/dev/null
-cp "../.bash_config" "$HOME/.bash_config" >&/dev/null
-cp "../.bash_exports" "$HOME/.bash_exports" >&/dev/null
-cp "../.bash_functions" "$HOME/.bash_functions" >&/dev/null
-# cp "../.bash_history" "$HOME/.bash_history" >&/dev/null
-cp "../.bash_logout" "$HOME/.bash_logout" >&/dev/null
-cp "../.bashrc" "$HOME/.bashrc" >&/dev/null
-cp "../.gitconfig" "$HOME/.gitconfig" >&/dev/null
-cp "../.nanorc" "$HOME/.nanorc" >&/dev/null
-cp "../.profile" "$HOME/.profile" >&/dev/null
-cp "../.wgetrc" "$HOME/.wgetrc" >&/dev/null
-
-touch "$HOME/.dotfiles_bootstrapped" >&/dev/null
+cp ".bash_aliases" "$HOME/.bash_aliases" >&/dev/null
+cp ".bash_config" "$HOME/.bash_config" >&/dev/null
+cp ".bash_exports" "$HOME/.bash_exports" >&/dev/null
+cp ".bash_functions" "$HOME/.bash_functions" >&/dev/null
+# cp ".bash_history" "$HOME/.bash_history" >&/dev/null
+cp ".bash_logout" "$HOME/.bash_logout" >&/dev/null
+cp ".bashrc" "$HOME/.bashrc" >&/dev/null
+cp ".gitconfig" "$HOME/.gitconfig" >&/dev/null
+cp ".nanorc" "$HOME/.nanorc" >&/dev/null
+cp ".profile" "$HOME/.profile" >&/dev/null
+cp ".wgetrc" "$HOME/.wgetrc" >&/dev/null
 
 source .bashrc
 
 echo "pass: dotfiles bootstrapped"
 echo "note: re-open your terminal"
 
-# popd >&/dev/null
+popd >&/dev/null
 exit 0

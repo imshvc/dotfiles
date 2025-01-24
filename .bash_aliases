@@ -8,7 +8,7 @@
 #   2025-01-19 01:15 AM
 #
 # updated:
-#   2025-01-24 02:20 AM
+#   2025-01-24 09:41 AM
 #
 # repository:
 #   https://github.com/imshvc/dotfiles
@@ -48,6 +48,12 @@ alias grep='grep --color=always'
 alias fgrep='fgrep --color=always'
 alias egrep='egrep --color=always'
 # end: aliases for common tools
+
+# block: exciting aliases
+alias md='mkdir -p'
+alias q='exit'
+alias c='clear'
+# end: exciting aliases
 
 # add an "alert" alias for long running commands
 # use like so: sleep 10; alert
