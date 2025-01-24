@@ -4,14 +4,11 @@
 # file:
 #   .bash_aliases
 #
-# description:
-#   aliases to boost productivity
-#
 # created:
 #   2025-01-19 01:15 AM
 #
 # updated:
-#   2025-01-23 10:40 PM
+#   2025-01-24 02:20 AM
 #
 # repository:
 #   https://github.com/imshvc/dotfiles
@@ -23,15 +20,12 @@
 #
 # note: '/' cannot be used as an alias (bash only?)
 #
-# todo:
-#   bash function to allow arguments
-#   because built-in 'cd' does not.
-#
-#     Example:
-#       .. magic  ->  calls 'cd .. && cd magic'
-#       r var     ->  calls 'cd / && cd var'
-alias ..='cd ..'
-alias ~='cd ~'
+# usage:
+#   .. magic  ->  calls 'cd .. && cd magic'
+#   r var     ->  calls 'cd / && cd var'
+alias ..='cdseq ..'
+alias ~='cdseq ~'
+alias r='cdseq /'
 
 # todo:
 #   switch bash to another shell
@@ -42,6 +36,7 @@ alias ~='cd ~'
 #
 # alias: mkdir (-p, --parents); see 'man mkdir'
 alias ?='man $*'
+alias ls='ls --color=always'
 alias ll='ls -laF --color=always'
 alias la='ls -A --color=always'
 alias l='ls -CF --color=always'
@@ -53,3 +48,7 @@ alias grep='grep --color=always'
 alias fgrep='fgrep --color=always'
 alias egrep='egrep --color=always'
 # end: aliases for common tools
+
+# add an "alert" alias for long running commands
+# use like so: sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

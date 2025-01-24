@@ -4,16 +4,51 @@
 # file:
 #   .bash_config
 #
-# description:
-#   bash configuration
-#
 # created:
 #   2025-01-19 02:14 AM
 #
 # updated:
-#   2025-01-23 10:18 PM
+#   2025-01-24 02:18 AM
 #
 # repository:
 #   https://github.com/imshvc/dotfiles
 
-# todo: list of shopt's and what they do.
+# begin: history
+
+HISTCONTROL=ignoredups:ignorespace:ignoreboth
+HISTSIZE=100000
+HISTFILESIZE=2000000
+
+# end: history
+
+# begin: shell options
+
+# append to history file - don't overwrite it
+shopt -s histappend
+
+# check window size after each command, and if
+# necessary update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# pattern "**" used in a pathname expansion context
+# will match all files and zero or more directories
+# and subdirectories
+shopt -s globstar
+
+# end: shell options
+
+# colored output that support it
+tput setaf 1 >&/dev/null
+
+# enable bash completion
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    source /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion
+  fi
+fi
+
+# make less more friendly for non-text input files
+# see: man lesspipe
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh /usr/bin/lesspipe)"
