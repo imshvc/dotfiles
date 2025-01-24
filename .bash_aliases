@@ -8,7 +8,7 @@
 #   2025-01-19 01:15 AM
 #
 # updated:
-#   2025-01-24 09:41 AM
+#   2025-01-24 10:02 AM
 #
 # repository:
 #   https://github.com/imshvc/dotfiles
@@ -32,7 +32,7 @@ alias r='cdseq /'
 #   so we can have unsupported aliases.
 # alias \/='cd /'
 
-# begin: aliases for common tools
+# begin: aliases for everything and anything
 #
 # alias: mkdir (-p, --parents); see 'man mkdir'
 alias ?='man $*'
@@ -47,13 +47,19 @@ alias mkdir='mkdir -p'
 alias grep='grep --color=always'
 alias fgrep='fgrep --color=always'
 alias egrep='egrep --color=always'
-# end: aliases for common tools
-
-# block: exciting aliases
+alias path='echo $PATH'
+alias paths='echo $PATH | tr : \\n'
 alias md='mkdir -p'
 alias q='exit'
 alias c='clear'
-# end: exciting aliases
+alias dl='~ Downloads'
+alias downloads='~ Downloads'
+alias ds='~ Desktop'
+alias desk='~ Desktop'
+alias desktop='~ Desktop'
+alias doc='~ Documents'
+alias docs='~ Documents'
+# end: aliases for everything and anything
 
 # add an "alert" alias for long running commands
 # use like so: sleep 10; alert
