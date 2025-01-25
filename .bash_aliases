@@ -8,7 +8,7 @@
 #   2025-01-19 01:15 AM
 #
 # updated:
-#   2025-01-24 10:02 AM
+#   2025-01-24 10:27 AM
 #
 # repository:
 #   https://github.com/imshvc/dotfiles
@@ -59,6 +59,7 @@ alias desk='~ Desktop'
 alias desktop='~ Desktop'
 alias doc='~ Documents'
 alias docs='~ Documents'
+alias pathlst='$EDITOR ~/.pathlst'
 # end: aliases for everything and anything
 
 # add an "alert" alias for long running commands

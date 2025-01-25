@@ -1,18 +1,7 @@
 # imshvc's dotfiles
 
-Personal dotfiles with many goodies.
-
-## Warnings
-
+Personal dotfiles with many goodies.  
 **WARNING**: Overwrites any existing files.
-
-Bootstrap will not proceed if the file exists: `~/.dotfiles_bootstrapped`
-
-You'll have to manually remove the file:
-
-```bash
-rm -f ~/.dotfiles_bootstrapped
-```
 
 ## Bootstrap: regular user
 
