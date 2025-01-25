@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# yt-dlp has to be present
+if ! command -v 'yt-dlp' 2>&1 >/dev/null
+then
+  echo 'requires: yt-dlp'
+  echo 'get it here: https://github.com/yt-dlp/yt-dlp/releases/'
+  exit 1
+fi
+
+script_usage () {
+  echo 'usage: ytmp3 <required: url> <optional: output file>'
+  echo 'description: proxy script for yt-dlp to download an mp3 file'
+  exit 1
+}
+
+url=$1
+output_file=$2
+
+if [ "$url" == "" ]; then
+  script_usage
+fi
+
+if [ "$output_file" == "" ]; then
+  yt-dlp -x --audio-format mp3 --audio-quality 0 "$url"
+else
+  yt-dlp -x --audio-format mp3 --audio-quality 0 "$url" --output "$output_file"
+fi
