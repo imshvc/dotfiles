@@ -1,7 +1,8 @@
 # todo file: dotfiles
 
-TODO: (1)
+TODO: (2)
   [ ] readme: _roughly_ explain what each dotfile is
+  [ ] code: bootstrap includes .local/bin/ files
 
 WIP: (3)
   # common directories and tasks
