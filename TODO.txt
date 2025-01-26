@@ -13,7 +13,8 @@ WIP: (3)
   # PS1 can substitute commands, search: __git_ps1 as an example.
   [*] functions: command substitution goodies for prompt
 
-DONE: (14)
+DONE: (15)
+  [x] fix: don't write one-liner output to ~/.bash_history
   [x] scripts: ytmp4 - proxy script for yt-dlp to download mp4
   [x] scripts: ytmp3 - proxy script for yt-dlp to download mp3
   [x] feature: .pathlst - list of paths for the PATH variable
