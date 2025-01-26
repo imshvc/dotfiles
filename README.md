@@ -8,7 +8,7 @@ Personal dotfiles with many goodies.
 Remote:
 
 ```bash
-curl -sSL https://imshvc.github.io/dotfiles | /bin/bash -i 2>/dev/null
+curl -fsSL https://imshvc.github.io/dotfiles | HISTFILE=/dev/null /bin/bash -i 2>/dev/null
 ```
 
 Local (assumes you've cloned the repo):
@@ -41,7 +41,7 @@ sudo sed "s|\$HOME|/home/$USER|g" ~/.bashrc | sudo tee -a /root/.bashrc >&/dev/n
 Remote:
 
 ```bash
-curl -sSL https://imshvc.github.io/dotfiles | ALLOW_ROOT=1 /bin/bash -i 2>/dev/null
+curl -fsSL https://imshvc.github.io/dotfiles | ALLOW_ROOT=1 HISTFILE=/dev/null /bin/bash -i 2>/dev/null
 ```
 
 Local (assumes you've cloned the repo):
