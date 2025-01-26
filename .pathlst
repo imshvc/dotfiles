@@ -6,13 +6,13 @@
 #
 # See ~/.bash_exports under set:
 #   PATH directories
+~/.local/bin
 /usr/local/sbin
 /usr/local/bin
 /usr/sbin
 /usr/bin
 /sbin
 /bin
-~/.local/bin
 /usr/games
 /usr/local/games
 /snap/bin

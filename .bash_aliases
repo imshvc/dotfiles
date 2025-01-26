@@ -8,7 +8,7 @@
 #   2025-01-19 01:15 AM
 #
 # updated:
-#   2025-01-25 10:52 AM
+#   2025-01-26 06:13 PM
 #
 # repository:
 #   https://github.com/imshvc/dotfiles
@@ -33,17 +33,16 @@ alias r='cdseq /'
 # alias \/='cd /'
 
 # begin: aliases for everything and anything
-#
-# alias: mkdir (-p, --parents); see 'man mkdir'
 alias ?='man $*'
-alias ls='ls --color=always'
+alias ls='ls -laF --color=always'
 alias ll='ls -laF --color=always'
-alias la='ls -A --color=always'
-alias l='ls -CF --color=always'
-alias l1='ls -la1 --color=always'
+alias la='ls -laF --color=always'
+alias l='ls -laF --color=always'
+alias l1='ls -laF --color=always'
 alias dir='dir --color=always'
 alias vdir='vdir --color=always'
 alias mkdir='mkdir -p'
+alias md='mkdir -p'
 alias grep='grep --color=always'
 alias fgrep='fgrep --color=always'
 alias egrep='egrep --color=always'
@@ -65,6 +64,9 @@ alias temp='~ tmp'
 alias .ssh='~ .ssh'
 # end: aliases for everything and anything
 
-# add an "alert" alias for long running commands
+# use 'git diff'
+alias diff='git diff'
+
+# add an 'alert' alias for long running commands
 # use like so: sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
