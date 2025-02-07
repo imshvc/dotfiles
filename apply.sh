@@ -13,7 +13,7 @@
 #   2025-02-07 11:44 AM
 #
 # updated:
-#   2025-02-08 12:31 AM
+#   2025-02-08 12:41 AM
 
 # if you don't specify the location
 # via arguments then output path
@@ -33,7 +33,7 @@ if [ $# != 0 ]; then
     exit 1
   else
     # pass: resolved path
-    echo "pass: resolved path: $resolved_path"
+    # echo "pass: resolved path: $resolved_path"
     output_path=$resolved_path
   fi
 fi
@@ -72,7 +72,6 @@ if [ ! -f "$output_path/.bash_history" ]; then
   touch "$output_path/.bash_history"
 fi
 
-echo "pass: applied dotfiles"
-echo "info: new terminal instance is required to see the changes"
+echo "imshvc/dotfiles... done"
 
 exit 0
