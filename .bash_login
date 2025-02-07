@@ -1,0 +1,4 @@
+# this file is read by bash in login mode (i.e. /bin/bash -l)
+# ~/.bash_profile
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
