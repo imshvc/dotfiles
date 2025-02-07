@@ -13,7 +13,7 @@
 #   2025-02-07 11:44 AM
 #
 # updated:
-#   2025-02-08 12:20 AM
+#   2025-02-08 12:31 AM
 
 # if you don't specify the location
 # via arguments then output path
@@ -47,6 +47,9 @@ mkdir -p "$output_path/.local/scripts" >&/dev/null
 
 cp ".local/scripts/ytmp3" "$output_path/.local/scripts" >&/dev/null
 cp ".local/scripts/ytmp4" "$output_path/.local/scripts" >&/dev/null
+
+chmod +x "$output_path/.local/scripts/ytmp3" >&/dev/null
+chmod +x "$output_path/.local/scripts/ytmp4" >&/dev/null
 
 cp ".bash_aliases" "$output_path" >&/dev/null
 cp ".bash_config" "$output_path" >&/dev/null
