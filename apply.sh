@@ -13,7 +13,7 @@
 #   2025-02-07 11:44 AM
 #
 # updated:
-#   2025-02-08 12:41 AM
+#   2025-02-08 12:44 AM
 
 # if you don't specify the location
 # via arguments then output path
@@ -37,9 +37,6 @@ if [ $# != 0 ]; then
     output_path=$resolved_path
   fi
 fi
-
-echo "info: output path: $output_path"
-echo "warn: files will be overwritten without prompt"
 
 mkdir -p "$output_path/.local" >&/dev/null
 mkdir -p "$output_path/.local/bin" >&/dev/null
