@@ -1,7 +1,11 @@
-# imshvc's dotfiles
+# **imshvc's dotfiles**
 
 Personal dotfiles with many goodies.  
 **WARNING**: Overwrites any existing files.
+
+## For MSYS2 users ...
+
+[Go here.](./msys2/README.md)
 
 ## Bootstrap: regular user
 

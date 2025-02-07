@@ -15,3 +15,22 @@
 /sbin
 /bin
 /opt/bin
+
+# -- MSYS2 Configuration --
+/mingw64/bin
+/mingw32/bin
+
+# Windows
+/c/Windows/System32
+/c/Windows
+/c/Windows/System32/Wbem
+/c/Windows/System32/WindowsPowerShell/v1.0/
+
+# npm
+/d/Apps/npm
+/d/Apps/npm/bin
+
+# etc ...
+/usr/bin/site_perl
+/usr/bin/vendor_perl
+/usr/bin/core_perl
