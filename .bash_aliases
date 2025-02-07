@@ -8,7 +8,7 @@
 #   2025-01-19 01:15 AM
 #
 # updated:
-#   2025-01-26 06:13 PM
+#   2025-02-07 05:37 PM
 #
 # repository:
 #   https://github.com/imshvc/dotfiles
@@ -62,10 +62,11 @@ alias pathlst='$EDITOR ~/.pathlst'
 alias tmp='~ tmp'
 alias temp='~ tmp'
 alias .ssh='~ .ssh'
+#alias work='cdseq  /d/work'
 # end: aliases for everything and anything
 
-# use 'git diff'
-alias diff='git diff'
+# use 'colordiff'
+alias diff='colordiff'
 
 # add an 'alert' alias for long running commands
 # use like so: sleep 10; alert
