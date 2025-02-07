@@ -1,17 +1,6 @@
-# authors:
-#   Nurudin Imsirovic <imshvc>
-#
-# file:
-#   .bash_aliases
-#
-# created:
-#   2025-01-19 01:15 AM
-#
-# updated:
-#   2025-02-07 05:37 PM
-#
-# repository:
-#   https://github.com/imshvc/dotfiles
+# file: .bash_aliases
+# created: 2025-01-19 01:15 AM
+# updated: 2025-02-07 05:59 PM
 
 # description: common path navigation
 #   ..  one level back

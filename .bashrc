@@ -1,17 +1,6 @@
-# authors:
-#   Nurudin Imsirovic <imshvc>
-#
-# file:
-#   .bashrc
-#
-# created:
-#   2025-01-24 02:09 AM
-#
-# updated:
-#   2025-01-24 02:40 AM
-#
-# repository:
-#   https://github.com/imshvc/dotfiles
+# file: .bashrc
+# created: 2025-01-24 02:09 AM
+# updated: 2025-02-07 06:13 PM
 
 # non-interactive shell: do nothing
 [[ $- != *i* ]] && return

@@ -1,17 +1,6 @@
-# authors:
-#   Nurudin Imsirovic <imshvc>
-#
-# file:
-#   .bash_exports
-#
-# created:
-#   2025-01-19 02:01 AM
-#
-# updated:
-#   2025-01-24 10:19 AM
-#
-# repository:
-#   https://github.com/imshvc/dotfiles
+# file: .bash_exports
+# created: 2025-01-19 02:01 AM
+# updated: 2025-01-27 06:10 PM
 
 # disclaimer:
 #   I use these on Ubuntu Desktop 24.10 running GNOME 47.

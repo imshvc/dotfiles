@@ -1,17 +1,6 @@
-# authors:
-#   Nurudin Imsirovic <imshvc>
-#
-# file:
-#   .bash_functions
-#
-# created:
-#   2025-01-19 02:14 AM
-#
-# updated:
-#   2025-01-24 04:21 AM
-#
-# repository:
-#   https://github.com/imshvc/dotfiles
+# file: .bash_functions
+# created: 2025-01-19 02:14 AM
+# updated: 2025-02-07 06:10 PM
 
 # functions:
 #   1. log (custom log function with colors)

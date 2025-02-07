@@ -1,4 +1,5 @@
-# this file is read by bash in login mode (i.e. /bin/bash -l)
-# ~/.bash_profile
+# file: .bash_login
+# desc: this file is read by bash in login mode
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+# source .bashrc if it exists
+[ -r ~/.bashrc ] && source ~/.bashrc
