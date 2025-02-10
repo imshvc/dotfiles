@@ -13,7 +13,7 @@
 #   2025-02-07 11:44 AM
 #
 # updated:
-#   2025-02-10 06:35 AM
+#   2025-02-10 07:03 AM
 
 # detect: cygwin
 # fail: not a supported platform
@@ -68,7 +68,6 @@ cp ".bash_logout" "$output_path" >&/dev/null
 cp ".bash_profile" "$output_path" >&/dev/null
 cp ".bashrc" "$output_path" >&/dev/null
 cp ".gitconfig" "$output_path" >&/dev/null
-cp ".gitignore" "$output_path" >&/dev/null
 cp ".nanorc" "$output_path" >&/dev/null
 cp ".npmrc" "$output_path" >&/dev/null
 cp ".pathlst" "$output_path" >&/dev/null
