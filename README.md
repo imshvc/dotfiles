@@ -4,7 +4,7 @@ Personal dotfiles.
 
 ## Installation
 
-**WARNING**: Destroys (_overwrites_) any existing files.
+⚠️ Destroys (_overwrites_) any existing files.
 
 **🟢Regular user**
 
