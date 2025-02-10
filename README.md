@@ -9,13 +9,13 @@ Personal dotfiles.
 **🟢Regular user**
 
 ```bash
-/bin/bash -c "$(curl -fsSL http://imshvc.github.io/dotfiles)"
+/bin/bash -c "$(curl -fsSL imshvc.github.io/dotfiles)"
 ```
 
 **🔴Root user**
 
 ```bash
-sudo /bin/bash -c "$(curl -fsSL http://imshvc.github.io/dotfiles)"
+sudo /bin/bash -c "$(curl -fsSL imshvc.github.io/dotfiles)"
 ```
 
 ## MSYS2 (Windows)
