@@ -1,6 +1,4 @@
-# **imshvc's dotfiles**
-
-Personal dotfiles.
+# **imshvc's dotfiles (🐧Linux and 🪟Windows via MSYS2)**
 
 ## Installation
 
