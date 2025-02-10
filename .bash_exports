@@ -1,11 +1,6 @@
 # file: .bash_exports
 # created: 2025-01-19 02:01 AM
-# updated: 2025-01-27 06:10 PM
-
-# disclaimer:
-#   I use these on Ubuntu Desktop 24.10 running GNOME 47.
-#   I cannot guarantee these will behave as intended on
-#   systems running different software.
+# updated: 2025-02-10 07:18 AM
 
 # begin: exports
 
@@ -29,6 +24,15 @@ export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;
 # set: PATH directories (if ~/.pathlst exists)
 if [ -r ~/.pathlst ]; then
   export PATH=$(grep -vE '^\s*#|^\s*$' ~/.pathlst | paste -sd ':' -)
+fi
+
+# set: PS1 prompt
+if [ $EUID = 0 ]; then
+  # root user
+  export PS1='\[\e]0;\w\a\]\n\[\e[31m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n# '
+else
+  # regular user
+  export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n$ '
 fi
 
 # end: exports
