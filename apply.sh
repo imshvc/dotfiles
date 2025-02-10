@@ -13,7 +13,14 @@
 #   2025-02-07 11:44 AM
 #
 # updated:
-#   2025-02-08 12:44 AM
+#   2025-02-10 06:35 AM
+
+# detect: cygwin
+# fail: not a supported platform
+if [[ "$(uname -s)" =~ ^CYGWIN_NT.* ]]; then
+  echo "fail: cygwin is not a supported platform"
+  exit 1
+fi
 
 # if you don't specify the location
 # via arguments then output path
@@ -30,7 +37,7 @@ if [ $# != 0 ]; then
   if [ $? != 0 ]; then
     # fail: invalid output path
     echo "fail: invalid output path: $new_path"
-    exit 1
+    exit 2
   else
     # pass: resolved path
     # echo "pass: resolved path: $resolved_path"
@@ -42,9 +49,13 @@ mkdir -p "$output_path/.local" >&/dev/null
 mkdir -p "$output_path/.local/bin" >&/dev/null
 mkdir -p "$output_path/.local/scripts" >&/dev/null
 
+cp ".local/scripts/is-cygwin" "$output_path/.local/scripts" >&/dev/null
+cp ".local/scripts/is-msys2" "$output_path/.local/scripts" >&/dev/null
 cp ".local/scripts/ytmp3" "$output_path/.local/scripts" >&/dev/null
 cp ".local/scripts/ytmp4" "$output_path/.local/scripts" >&/dev/null
 
+chmod +x "$output_path/.local/scripts/is-cygwin" >&/dev/null
+chmod +x "$output_path/.local/scripts/is-msys2" >&/dev/null
 chmod +x "$output_path/.local/scripts/ytmp3" >&/dev/null
 chmod +x "$output_path/.local/scripts/ytmp4" >&/dev/null
 
@@ -68,7 +79,5 @@ cp ".wgetrc" "$output_path" >&/dev/null
 if [ ! -f "$output_path/.bash_history" ]; then
   touch "$output_path/.bash_history"
 fi
-
-echo "imshvc/dotfiles... done"
 
 exit 0

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+[[ "$(uname -s)" =~ ^CYGWIN_NT.* ]] && echo 1 || echo 0
