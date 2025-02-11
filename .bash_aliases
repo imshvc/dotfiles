@@ -1,6 +1,6 @@
 # file: .bash_aliases
 # created: 2025-01-19 01:15 AM
-# updated: 2025-02-11 07:49 AM
+# updated: 2025-02-11 08:59 PM
 
 # description: common path navigation
 #   ..  one level back
@@ -46,7 +46,7 @@ alias pathlst='$EDITOR ~/.pathlst'
 alias tmp='~ tmp'
 alias temp='~ tmp'
 alias .ssh='~ .ssh'
-#alias work='cdseq  /d/work'
+#alias work='cdseq /d/work'
 # end: aliases for everything and anything
 
 # use 'colordiff'

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+target_file="/d/Apps/BIND/nsupdate.exe"
+
+if [ -f "$target_file" ]; then
+  if [ -x "$target_file" ]; then
+    exec "$target_file" $*
+  else
+    echo "fail: proxied target is not executable: $target_file"
+    exit 1
+  fi
+else
+  echo "fail: proxied target is missing: $target_file"
+  exit 2
+fi

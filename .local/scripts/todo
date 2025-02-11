@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+todo_txt="$PWD/TODO.txt"
+
+# open TODO.txt if it exists at $PWD
+if [ -f "$todo_txt" ]; then
+  exec "$EDITOR" "$todo_txt"
+else
+  echo "fail: no TODO.txt file"
+  exit 1
+fi

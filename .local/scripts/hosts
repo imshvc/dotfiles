@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+windows_hosts=/c/Windows/System32/drivers/etc/hosts
+
+# windows
+if [ -f $windows_hosts ]; then
+  exec $EDITOR $windows_hosts
+fi
+
+# linux
+exec $EDITOR /etc/hosts

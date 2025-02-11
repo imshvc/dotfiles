@@ -13,7 +13,7 @@
 #   2025-02-10 06:29 AM
 #
 # updated:
-#   2025-02-11 05:31 PM
+#   2025-02-11 09:16 PM
 
 # fail: cygwin is not supported
 if [[ "$(uname -s)" =~ ^CYGWIN_NT.* ]]; then
@@ -47,11 +47,12 @@ cp ".pathlst" "$home_path" >&/dev/null
 
 cat ".bash_exports.append" >> "$home_path/.bash_exports"
 
-cp "scripts/chrome" "$home_path/.local/scripts" >&/dev/null
-cp "scripts/code" "$home_path/.local/scripts" >&/dev/null
-cp "scripts/dotnet" "$home_path/.local/scripts" >&/dev/null
-cp "scripts/firefox" "$home_path/.local/scripts" >&/dev/null
-cp "scripts/msedge" "$home_path/.local/scripts" >&/dev/null
-cp "scripts/php" "$home_path/.local/scripts" >&/dev/null
+# todo: for loop to solve this without hardcoded names
+scripts="arpaname chrome code dig dotnet firefox host java javaw mdig msedge n++ named ncat nmap notepad notepad++ nping npp nslookup nsupdate php"
+
+for script in $(echo $scripts | tr " " "\n"); do
+  cp "scripts/${script}" "$home_path/.local/scripts" >&/dev/null
+  chmod +x "$home_path/.local/scripts/${script}" >&/dev/null
+done
 
 exit 0

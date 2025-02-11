@@ -13,7 +13,7 @@
 #   2025-02-07 11:44 AM
 #
 # updated:
-#   2025-02-11 09:53 AM
+#   2025-02-11 09:20 PM
 
 # fail: cygwin is not supported
 if [[ "$(uname -s)" =~ ^CYGWIN_NT.* ]]; then
@@ -60,15 +60,13 @@ mkdir -p "$home_path/.local" >&/dev/null
 mkdir -p "$home_path/.local/bin" >&/dev/null
 mkdir -p "$home_path/.local/scripts" >&/dev/null
 
-cp ".local/scripts/is-cygwin" "$home_path/.local/scripts" >&/dev/null
-cp ".local/scripts/is-msys2" "$home_path/.local/scripts" >&/dev/null
-cp ".local/scripts/ytmp3" "$home_path/.local/scripts" >&/dev/null
-cp ".local/scripts/ytmp4" "$home_path/.local/scripts" >&/dev/null
+# todo: for loop to solve this without hardcoded names
+scripts="edit-script hosts is-cygwin is-msys2 todo ytmp3 ytmp4"
 
-chmod +x "$home_path/.local/scripts/is-cygwin" >&/dev/null
-chmod +x "$home_path/.local/scripts/is-msys2" >&/dev/null
-chmod +x "$home_path/.local/scripts/ytmp3" >&/dev/null
-chmod +x "$home_path/.local/scripts/ytmp4" >&/dev/null
+for script in $(echo $scripts | tr " " "\n"); do
+  cp ".local/scripts/${script}" "$home_path/.local/scripts" >&/dev/null
+  chmod +x "$home_path/.local/scripts/${script}" >&/dev/null
+done
 
 cp ".bash_aliases" "$home_path" >&/dev/null
 cp ".bash_config" "$home_path" >&/dev/null
