@@ -1,6 +1,6 @@
 # file: .bash_aliases
 # created: 2025-01-19 01:15 AM
-# updated: 2025-02-07 05:59 PM
+# updated: 2025-02-11 07:49 AM
 
 # description: common path navigation
 #   ..  one level back
@@ -16,18 +16,13 @@ alias ..='cdseq ..'
 alias ~='cdseq ~'
 alias r='cdseq /'
 
-# todo:
-#   switch bash to another shell
-#   so we can have unsupported aliases.
-# alias \/='cd /'
-
 # begin: aliases for everything and anything
-alias ?='man $*'
-alias ls='ls -laF --color=always'
-alias ll='ls -laF --color=always'
-alias la='ls -laF --color=always'
-alias l='ls -laF --color=always'
-alias l1='ls -laF --color=always'
+#alias ?='man $*'
+alias ls='ls --color=always'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias l1='ls -la1'
 alias dir='dir --color=always'
 alias vdir='vdir --color=always'
 alias mkdir='mkdir -p'
