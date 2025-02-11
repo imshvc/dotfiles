@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # yt-dlp has to be present
-if ! command -v 'yt-dlp' 2>&1 >/dev/null
-then
+if ! command -v 'yt-dlp' 2>&1 >/dev/null; then
   echo 'fail: yt-dlp not installed'
   echo '  1. install via pacman: pacman -S yt-dlp'
   echo '  2. via github release: https://github.com/yt-dlp/yt-dlp/releases/'

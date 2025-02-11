@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+script_name="$1"
+
+# fail: no editor set
+if [ "$EDITOR" = "" ]; then
+  echo "fail: no EDITOR variable set"
+  exit 1
+fi
+
+# fail: no script name
+if [ "$script_name" = "" ]; then
+  echo "usage: edit-script <script name>"
+  exit 2
+fi
+
+script_path="$HOME/.local/scripts/$script_name"
+
+# fail: no script file
+if [ ! -f "$script_path" ]; then
+  echo "fail: no script file under that name: ${script_name}"
+  exit 3
+fi
+
+exec "$EDITOR" "$script_path"

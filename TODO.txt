@@ -1,0 +1,27 @@
+# todo file: https://github.com/imshvc/dotfiles
+
+# authors:
+#   Nurudin Imsirovic <imshvc>
+#
+# summary:
+#   to-do checklist for my dotfiles.
+#
+# created:
+#   2025-02-11 12:41 PM
+#
+# updated:
+#   2025-02-11 05:27 PM
+
+[ ] template: bash completion script
+[x] template: proxy-command - example 'msys2/scripts/dotnet' of how it's used.
+
+[x] linux scripts:
+    [x] edit-script: opens ~/.local/scripts/$file in $EDITOR
+
+[x] msys2 scripts:
+    [x] dotnet (NET CLI)
+    [x] code (Visual Studio Code)
+    [x] msedge (Microsoft Edge)
+    [x] chrome (Google Chrome)
+    [x] firefox (Mozilla Firefox)
+    [x] php

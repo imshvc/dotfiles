@@ -13,7 +13,7 @@
 #   2025-02-10 06:29 AM
 #
 # updated:
-#   2025-02-11 09:52 AM
+#   2025-02-11 05:31 PM
 
 # fail: cygwin is not supported
 if [[ "$(uname -s)" =~ ^CYGWIN_NT.* ]]; then
@@ -46,5 +46,12 @@ cp ".npmrc" "$home_path" >&/dev/null
 cp ".pathlst" "$home_path" >&/dev/null
 
 cat ".bash_exports.append" >> "$home_path/.bash_exports"
+
+cp "scripts/chrome" "$home_path/.local/scripts" >&/dev/null
+cp "scripts/code" "$home_path/.local/scripts" >&/dev/null
+cp "scripts/dotnet" "$home_path/.local/scripts" >&/dev/null
+cp "scripts/firefox" "$home_path/.local/scripts" >&/dev/null
+cp "scripts/msedge" "$home_path/.local/scripts" >&/dev/null
+cp "scripts/php" "$home_path/.local/scripts" >&/dev/null
 
 exit 0
