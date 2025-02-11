@@ -1,6 +1,6 @@
 # file: .bash_exports
 # created: 2025-01-19 02:01 AM
-# updated: 2025-02-10 07:18 AM
+# updated: 2025-02-11 03:14 PM
 
 # begin: exports
 
@@ -29,10 +29,10 @@ fi
 # set: PS1 prompt
 if [ $EUID = 0 ]; then
   # root user
-  export PS1='\[\e]0;\w\a\]\n\[\e[31m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n# '
+  export PS1="\n\[\e[31m\]\u@\H \[\e[33m\]\w\[\e[0m\]\n# "
 else
   # regular user
-  export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n$ '
+  export PS1="\n\[\e[32m\]\u@\H \[\e[33m\]\w\[\e[0m\]\n$ "
 fi
 
 # end: exports
