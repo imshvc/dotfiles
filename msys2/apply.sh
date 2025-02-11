@@ -7,25 +7,23 @@
 #   msys2/apply.sh
 #
 # summary:
-#   Copy dotfiles to $output_path
+#   Copy dotfiles to $home_path
 #
 # created:
 #   2025-02-10 06:29 AM
 #
 # updated:
-#   2025-02-10 06:29 AM
+#   2025-02-11 09:52 AM
 
-# detect: cygwin
-# fail: not a supported platform
+# fail: cygwin is not supported
 if [[ "$(uname -s)" =~ ^CYGWIN_NT.* ]]; then
-  echo "fail: cygwin is not a supported platform"
+  echo "fail: cygwin is not supported"
   exit 1
 fi
 
-# if you don't specify the location
-# via arguments then output path
+# no location given
 # defaults to $HOME
-output_path=$HOME
+home_path=$HOME
 
 # do: check argument values
 if [ $# != 0 ]; then
@@ -40,12 +38,13 @@ if [ $# != 0 ]; then
     exit 2
   else
     # pass: resolved path
-    # echo "pass: resolved path: $resolved_path"
-    output_path=$resolved_path
+    home_path=$resolved_path
   fi
 fi
 
-cp ".npmrc" "$output_path" >&/dev/null
-cp ".pathlst" "$output_path" >&/dev/null
+cp ".npmrc" "$home_path" >&/dev/null
+cp ".pathlst" "$home_path" >&/dev/null
+
+cat ".bash_exports.append" >> "$home_path/.bash_exports"
 
 exit 0

@@ -15,3 +15,8 @@
 /sbin
 /bin
 /opt/bin
+
+# perl specific
+/usr/bin/site_perl
+/usr/bin/vendor_perl
+/usr/bin/core_perl

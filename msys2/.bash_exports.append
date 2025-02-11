@@ -1,0 +1,7 @@
+# begin: msys2 exports
+
+# fix: some windows tools using COMSPEC and not the SHELL variable
+#      to spawn a process with the wrong shell (cmd.exe in this case)
+export COMSPEC=$SHELL
+
+# end: msys2 exports

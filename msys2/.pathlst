@@ -16,7 +16,13 @@
 /bin
 /opt/bin
 
-# -- MSYS2 Configuration --
+# perl specific
+/usr/bin/site_perl
+/usr/bin/vendor_perl
+/usr/bin/core_perl
+
+# begin: msys2 configuration
+
 /mingw64/bin
 /mingw32/bin
 
@@ -30,7 +36,4 @@
 /d/Apps/npm
 /d/Apps/npm/bin
 
-# etc ...
-/usr/bin/site_perl
-/usr/bin/vendor_perl
-/usr/bin/core_perl
+# end: msys2 configuration
