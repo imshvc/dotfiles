@@ -1,6 +1,6 @@
 # file: .bash_aliases
 # created: 2025-01-19 01:15 AM
-# updated: 2025-02-11 08:59 PM
+# updated: 2025-02-19 06:23 PM
 
 # description: common path navigation
 #   ..  one level back
@@ -34,6 +34,7 @@ alias path='echo $PATH'
 alias paths='echo $PATH | tr : \\n'
 alias md='mkdir -p'
 alias q='exit'
+alias Q='exit'
 alias c='clear'
 alias dl='~ Downloads'
 alias downloads='~ Downloads'
