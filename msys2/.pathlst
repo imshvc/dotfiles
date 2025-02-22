@@ -22,9 +22,10 @@
 /usr/bin/core_perl
 
 # begin: msys2 configuration
-
 /mingw64/bin
 /mingw32/bin
+/clang64/bin
+/ucrt64/bin
 
 # Windows
 /c/Windows/System32
@@ -35,5 +36,4 @@
 # npm
 /d/Apps/npm
 /d/Apps/npm/bin
-
 # end: msys2 configuration
