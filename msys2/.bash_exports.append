@@ -1,7 +1,6 @@
 # begin: msys2 exports
 
-# fix: some windows tools using COMSPEC and not the SHELL variable
-#      to spawn a process with the wrong shell (cmd.exe in this case)
-export COMSPEC=$SHELL
+# hardcode cmd.exe path -- see /usr/bin/cmd (MSYS2)
+export COMSPEC=/c/Windows/System32/cmd.exe
 
 # end: msys2 exports
