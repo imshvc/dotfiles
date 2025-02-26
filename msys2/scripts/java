@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_file="/d/Apps/OpenJDK 23/bin/java.exe"
+target_file="$APPS_DIR/OpenJDK 23/bin/java.exe"
 
 if [ -f "$target_file" ]; then
   if [ -x "$target_file" ]; then

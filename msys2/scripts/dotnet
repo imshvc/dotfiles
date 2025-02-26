@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_file="/c/Program Files/dotnet/dotnet.exe"
+target_file="$APPS_DIR/dotnet/dotnet.exe"
 
 if [ -f "$target_file" ]; then
   if [ -x "$target_file" ]; then

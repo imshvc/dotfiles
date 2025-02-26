@@ -3,4 +3,13 @@
 # hardcode cmd.exe path -- see /usr/bin/cmd (MSYS2)
 export COMSPEC=/c/Windows/System32/cmd.exe
 
+# program files (apps) directories
+if [ "$APPS_DIR" = "" ]; then
+  export APPS_DIR="/c/Program Files"
+fi
+
+if [ "$APPS_X86_DIR" = "" ]; then
+  export APPS_X86_DIR="/c/Program Files (x86)"
+fi
+
 # end: msys2 exports

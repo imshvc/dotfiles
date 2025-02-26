@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_file="/c/Program Files/Mozilla Firefox/firefox.exe"
+target_file="$APPS_DIR/Mozilla Firefox/firefox.exe"
 
 if [ -f "$target_file" ]; then
   if [ -x "$target_file" ]; then

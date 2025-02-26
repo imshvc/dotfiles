@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_file="/d/Apps/Nmap/nmap.exe"
+target_file="$APPS_DIR/Nmap/nmap.exe"
 
 if [ -f "$target_file" ]; then
   if [ -x "$target_file" ]; then

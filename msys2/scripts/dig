@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_file="/d/Apps/BIND/dig.exe"
+target_file="$APPS_DIR/BIND/dig.exe"
 
 if [ -f "$target_file" ]; then
   if [ -x "$target_file" ]; then

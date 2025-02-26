@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_file="/d/Apps/BIND/host.exe"
+target_file="$APPS_DIR/BIND/host.exe"
 
 if [ -f "$target_file" ]; then
   if [ -x "$target_file" ]; then

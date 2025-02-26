@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_file="/c/Program Files/Notepad++/notepad++.exe"
+target_file="$APPS_DIR/Notepad++/notepad++.exe"
 
 if [ -f "$target_file" ]; then
   if [ -x "$target_file" ]; then

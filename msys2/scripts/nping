@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_file="/d/Apps/Nmap/nping.exe"
+target_file="$APPS_DIR/Nmap/nping.exe"
 
 if [ -f "$target_file" ]; then
   if [ -x "$target_file" ]; then
