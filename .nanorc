@@ -3,7 +3,6 @@ set nonewlines
 set tabsize 2
 set tabstospaces
 set linenumbers
-include "/usr/share/nano/*.nanorc"
-include "/usr/share/nano-syntax-highlighting/*.nanorc"
+include "~/.local/share/nano-syntax-highlighting/*.nanorc"
 set stateflags
 set zap

@@ -13,7 +13,7 @@
 #   2025-02-07 11:44 AM
 #
 # updated:
-#   2025-02-11 09:20 PM
+#   2025-02-26 11:05 AM
 
 # fail: cygwin is not supported
 if [[ "$(uname -s)" =~ ^CYGWIN_NT.* ]]; then
@@ -38,7 +38,6 @@ if [ $# != 0 ]; then
     exit 2
   else
     # pass: resolved path
-    # echo "pass: resolved path: $resolved_path"
     home_path=$resolved_path
   fi
 fi
@@ -59,6 +58,8 @@ fi
 mkdir -p "$home_path/.local" >&/dev/null
 mkdir -p "$home_path/.local/bin" >&/dev/null
 mkdir -p "$home_path/.local/scripts" >&/dev/null
+mkdir -p "$home_path/.local/share" >&/dev/null
+mkdir -p "$home_path/.local/share/nano-syntax-highlighting" >&/dev/null
 
 # todo: for loop to solve this without hardcoded names
 scripts="edit-script hosts is-cygwin is-msys2 todo ytmp3 ytmp4"
@@ -87,6 +88,11 @@ cp ".wgetrc" "$home_path" >&/dev/null
 # create .bash_history
 if [ ! -f "$home_path/.bash_history" ]; then
   touch "$home_path/.bash_history"
+fi
+
+# install nano syntax highlighting
+if [ -f "nano-syntax-highlighting.zip" ]; then
+  unzip "nano-syntax-highlighting.zip" -d "$home_path/.local/share/nano-syntax-highlighting" -qq
 fi
 
 # on msys2 this script runs and has to
