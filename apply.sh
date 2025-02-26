@@ -13,7 +13,7 @@
 #   2025-02-07 11:44 AM
 #
 # updated:
-#   2025-02-26 11:05 AM
+#   2025-02-26 11:13 AM
 
 # fail: cygwin is not supported
 if [[ "$(uname -s)" =~ ^CYGWIN_NT.* ]]; then
@@ -92,7 +92,7 @@ fi
 
 # install nano syntax highlighting
 if [ -f "nano-syntax-highlighting.zip" ]; then
-  unzip "nano-syntax-highlighting.zip" -d "$home_path/.local/share/nano-syntax-highlighting" -qq
+  unzip "nano-syntax-highlighting.zip" -d "$home_path/.local/share/nano-syntax-highlighting" 2>&1 >/dev/null
 fi
 
 # on msys2 this script runs and has to
