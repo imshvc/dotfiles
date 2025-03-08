@@ -10,19 +10,40 @@ fi
 
 script_usage () {
   echo 'usage: ytmp4 <required: url> <optional: output file>'
-  echo 'description: proxy script for yt-dlp to download an mp4 file'
+  echo 'description: proxy script for yt-dlp to download an mp3 file'
   exit 1
 }
 
 url=$1
 output_file=$2
+extra_params=0
+
+# allow optional parameters
+# 1. without output file
+if [ "$output_file" == "--" ]; then
+  output_file=
+  extra_params=1
+fi
+
+# 2. with output file
+if [ "$3" == "--" ]; then
+  extra_params=1
+fi
 
 if [ "$url" == "" ]; then
   script_usage
 fi
 
 if [ "$output_file" == "" ]; then
-  yt-dlp -f "bestvideo+bestaudio/best" --recode mp4 "$url"
+  if [ "$extra_params" == "1" ]; then
+    yt-dlp -f "bestvideo+bestaudio/best" --recode mp4 "$url" $*
+  else
+    yt-dlp -f "bestvideo+bestaudio/best" --recode mp4 "$url"
+  fi
 else
-  yt-dlp -f "bestvideo+bestaudio/best" --recode mp4 "$url" --output "$output_file"
+  if [ "$extra_params" == "1" ]; then
+    yt-dlp -f "bestvideo+bestaudio/best" --recode mp4 "$url" --output "$output_file" $*
+  else
+    yt-dlp -f "bestvideo+bestaudio/best" --recode mp4 "$url" --output "$output_file"
+  fi
 fi

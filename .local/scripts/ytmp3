@@ -16,13 +16,34 @@ script_usage () {
 
 url=$1
 output_file=$2
+extra_params=0
+
+# allow optional parameters
+# 1. without output file
+if [ "$output_file" == "--" ]; then
+  output_file=
+  extra_params=1
+fi
+
+# 2. with output file
+if [ "$3" == "--" ]; then
+  extra_params=1
+fi
 
 if [ "$url" == "" ]; then
   script_usage
 fi
 
 if [ "$output_file" == "" ]; then
-  yt-dlp -x --audio-format mp3 --audio-quality 0 "$url"
+  if [ "$extra_params" == "1" ]; then
+    yt-dlp -x --audio-format mp3 --audio-quality 0 "$url" $*
+  else
+    yt-dlp -x --audio-format mp3 --audio-quality 0 "$url"
+  fi
 else
-  yt-dlp -x --audio-format mp3 --audio-quality 0 "$url" --output "$output_file"
+  if [ "$extra_params" == "1" ]; then
+    yt-dlp -x --audio-format mp3 --audio-quality 0 "$url" --output "$output_file" $*
+  else
+    yt-dlp -x --audio-format mp3 --audio-quality 0 "$url" --output "$output_file"
+  fi
 fi
