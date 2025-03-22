@@ -1,15 +1,13 @@
 [user]
 	name = Nurudin Imsirovic
 	author = imshvc
-	email = realnurudinimsirovic@gmail.com
+	email = nurudinimsirovic@icloud.com
 
 [core]
 	filemode = false
 	editor = nano
 	autocrlf = false
 	longpaths = true
-	# fix: for windows
-  # sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 
 [filter "lfs"]
 	required = true
@@ -26,10 +24,6 @@
 [push]
 	autoSetupRemote = true
 	default = simple
-
-# fix: Windows
-#[http]
-#  sslcainfo = C:\\Program Files\\Git\\usr\\ssl\\certs\\ca-bundle.crt
 
 [safe]
 	directory = *
