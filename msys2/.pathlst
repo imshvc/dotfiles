@@ -36,4 +36,8 @@
 # npm
 /d/Apps/npm
 /d/Apps/npm/bin
+
+# emscripten
+/clang64/lib/emscripten
+
 # end: msys2 configuration
