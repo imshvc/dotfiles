@@ -1,18 +1,19 @@
-# **imshvc's dotfiles (🐧Linux and 🪟Windows via MSYS2)**
+# **imshvc's dotfiles (Linux and Windows via MSYS2)**
 
 ## Installation - Remote
 
-⚠️ Destroys (_overwrites_) any existing files.
+> [!CAUTION]
+> Destroys (_overwrites_) any existing files.
 
-**🟢Regular user**
+**Regular user**
 
-```bash
+```text
 /bin/bash -c "$(curl -fsSL imshvc.github.io/dotfiles)"
 ```
 
-**🔴Root user**
+**Root user**
 
-```bash
+```text
 sudo /bin/bash -c "$(curl -fsSL imshvc.github.io/dotfiles)"
 ```
 
@@ -23,8 +24,17 @@ sudo /bin/bash -c "$(curl -fsSL imshvc.github.io/dotfiles)"
 
 ## MSYS2 (Windows)
 
-⚠️ You must set your user an environment variable **HOME** pointing to your user directory:
+> [!CAUTION]
+> You must set your user an environment variable **HOME** pointing to your user directory:
 
 ```text
 HOME = C:\Users\Nurudin
+```
+
+You must run: `C:\msys64\usr\bin\bash.exe --login`
+
+```text
+Nurudin@NURUDIN-PC MSYS ~
+$ echo $HOME
+/c/Users/Nurudin
 ```
